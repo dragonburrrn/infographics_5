@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="ru" data-color-scheme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>Инфографика Анастасии Петровой</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* ===== PERPLEXITY DESIGN SYSTEM ===== */
+    :root {
+      --color-white: rgba(255, 255, 255, 1);
+      --color-black: rgba(0, 0, 0, 1);
+      --color-charcoal-700: rgba(31, 33, 33, 1);
+      --color-charcoal-800: rgba(38, 40, 40, 1);
+      --color-gray-200: rgba(245, 245, 245, 1);
+      --color-gray-300: rgba(167, 169, 169, 1);
+      --color-gray-400: rgba(119, 124, 124, 1);
+      --color-red-400: rgba(255, 50, 50, 1);
+      --color-red-500: rgba(255, 30, 30, 1);
+      --color-orange-400: rgba(230, 129, 97, 1);
+      --color-teal-400: rgba(45, 166, 178, 1);
+
+      --color-background: #1a1a1a;
+      --color-surface: #1a1a1a;
+      --color-text: var(--color-gray-200);
+      --color-text-secondary: rgba(245, 245, 245, 0.7);
+      --color-primary: var(--color-red-400);
+      --color-primary-hover: var(--color-red-500);
+      --color-border: rgba(119, 124, 124, 0.3);
+
+      --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+        BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+        Monaco, Consolas, monospace;
+      --font-size-xs: 11px;
+      --font-size-sm: 12px;
+      --font-size-base: 14px;
+      --font-size-lg: 16px;
+      --font-size-xl: 18px;
+      --font-size-2xl: 20px;
+      --font-size-3xl: 24px;
+      --font-size-4xl: 30px;
+
+      --space-4: 4px;
+      --space-6: 6px;
+      --space-8: 8px;
+      --space-12: 12px;
+      --space-16: 16px;
+      --space-20: 20px;
+      --space-24: 24px;
+      --space-32: 32px;
+
+      --radius-base: 8px;
+      --radius-lg: 12px;
+      --radius-full: 9999px;
+
+      --shadow-sm: none;
+      --shadow-md: none;
+
+      --duration-fast: 150ms;
+      --duration-normal: 250ms;
+      --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+    @font-face {
+      font-family: 'FKGroteskNeue';
+      src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+        format('woff2');
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--color-background);
+      color: var(--color-text);
+      font-family: 'Rubik', sans-serif;
+      font-size: var(--font-size-base);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--color-primary-hover);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    h1 {
+      font-size: var(--font-size-4xl);
+    }
+
+    h2 {
+      font-size: var(--font-size-2xl);
+    }
+
+    h3 {
+      font-size: var(--font-size-xl);
+    }
+
+    .page-wrapper {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: var(--space-16);
+      width: 100%;
+    }
+
+    .top-bar {
+      display: none;
+    }
+
+    .top-bar__title {
+      display: flex;
+      align-items: baseline;
+      gap: var(--space-8);
+    }
+
+    .top-bar__subtitle {
+      font-size: var(--font-size-sm);
+      color: var(--color-text-secondary);
+    }
+
+    .card {
+      border-radius: 0;
+      border: 2px solid rgba(255, 255, 255, 1);
+      background: var(--color-surface);
+      box-shadow: none;
+      padding: var(--space-32);
+      margin-bottom: var(--space-32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card__header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-12);
+      margin-bottom: var(--space-24);
+    }
+
+    .card__title {
+      font-size: var(--font-size-2xl);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-text);
+    }
+
+    .card__dots {
+      display: none;
+    }
+
+    .dot {
+      display: none;
+    }
+
+    .dot--accent {
+      display: none;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.15);
+      margin-bottom: var(--space-24);
+    }
+
+    /* ИНФОРМАЦИЯ SECTION */
+    .info-content {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: var(--space-32);
+      align-items: start;
+    }
+
+    @media (max-width: 768px) {
+      .info-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .avatar-circle {
+      width: 160px;
+      height: 160px;
+      border-radius: 0;
+      border: 2px solid var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-surface);
+      font-family: var(--font-family-mono);
+      font-size: var(--font-size-xs);
+      text-align: center;
+      padding: var(--space-8);
+      flex-shrink: 0;
+    }
+
+    .info-fields {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-16) var(--space-24);
+    }
+
+    .info-field {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .info-field__label {
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--color-text-secondary);
+    }
+
+    .info-field__value {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* BIOGRAPHY SECTION */
+    .timeline-interactive {
+      position: relative;
+      margin: var(--space-24) 0;
+    }
+
+    .timeline-track {
+      position: relative;
+      height: 20px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 0;
+      margin-bottom: var(--space-24);
+    }
+
+    .timeline-track::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent calc(100% / 23 - 1px),
+        rgba(0, 0, 0, 0.3) calc(100% / 23 - 1px),
+        rgba(0, 0, 0, 0.3) calc(100% / 23)
+      );
+      pointer-events: none;
+    }
+
+    .timeline-points {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+
+    .timeline-point {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+      background: var(--color-surface);
+      cursor: pointer;
+      transition: all var(--duration-fast) var(--ease-standard);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-sm);
+      color: var(--color-text);
+      font-weight: 600;
+    }
+
+    .timeline-point:hover,
+    .timeline-point--active {
+      border-color: var(--color-primary);
+      background: var(--color-primary);
+      color: var(--color-white);
+      transform: scale(1.2);
+    }
+
+    .timeline-point--inactive {
+      display: none;
+    }
+
+    .timeline-point--inactive:hover {
+      transform: none;
+    }
+
+    .bio-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-16);
+    }
+
+    .bio-modal--active {
+      display: flex;
+    }
+
+    .bio-modal__content {
+      background: var(--color-surface);
+      border: 2px solid rgba(255, 255, 255, 1);
+      border-radius: 0;
+      padding: var(--space-32);
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .bio-modal__close {
+      position: absolute;
+      top: var(--space-12);
+      right: var(--space-12);
+      background: transparent;
+      border: none;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-xl);
+      cursor: pointer;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0;
+    }
+
+    .bio-modal__close:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--color-primary);
+    }
+
+    .bio-modal__header {
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      margin-bottom: var(--space-16);
+      color: var(--color-primary);
+    }
+
+    .bio-modal__photo {
+      width: 100%;
+      height: 200px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      margin-bottom: var(--space-16);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-sm);
+    }
+
+    .bio-modal__text {
+      font-size: var(--font-size-base);
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    /* ОБРАЗОВАНИЕ SECTION */
+    .education-header {
+      display: flex;
+      gap: var(--space-12);
+      margin-bottom: var(--space-24);
+      flex-wrap: wrap;
+    }
+
+    .edu-icon-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-8);
+      cursor: pointer;
+      padding: var(--space-8);
+      border-radius: 0;
+      border: 2px solid transparent;
+      transition: all var(--duration-fast) var(--ease-standard);
+      background: var(--color-surface);
+    }
+
+    .edu-icon-btn:hover,
+    .edu-icon-btn--active {
+      border-color: var(--color-primary);
+      background: rgba(255, 84, 89, 0.1);
+    }
+
+    .edu-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 0;
+      border: 2px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-lg);
+      background: var(--color-surface);
+    }
+
+    .edu-label {
+      font-size: var(--font-size-xs);
+      text-align: center;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      max-width: 90px;
+    }
+
+    .education-timeline {
+      position: relative;
+      margin-top: var(--space-32);
+    }
+
+    .edu-track {
+      position: relative;
+      height: 20px;
+      background: rgba(255, 255, 255, 1);
+      border-radius: 0;
+      margin-bottom: var(--space-16);
+    }
+
+    .edu-track::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        to right,
+        transparent 0,
+        transparent calc(100% / 22 - 1px),
+        rgba(0, 0, 0, 0.3) calc(100% / 22 - 1px),
+        rgba(0, 0, 0, 0.3) calc(100% / 22)
+      );
+      pointer-events: none;
+    }
+
+    .edu-progress {
+      position: absolute;
+      height: 100%;
+      background: var(--color-primary);
+      border-radius: 0;
+      top: 0;
+      left: 0;
+      transition: all var(--duration-normal) var(--ease-standard);
+    }
+
+    .edu-years {
+      display: none;
+    }
+
+    /* НАВЫКИ SECTION */
+    .skills-header {
+      display: flex;
+      gap: var(--space-12);
+      margin-bottom: var(--space-24);
+      flex-wrap: wrap;
+    }
+
+    .course-btn {
+      padding: var(--space-8) var(--space-16);
+      border-radius: 0;
+      border: 2px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text);
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      transition: all var(--duration-fast) var(--ease-standard);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .course-btn:hover,
+    .course-btn--active {
+      border-color: var(--color-primary);
+      background: rgba(255, 84, 89, 0.15);
+      color: var(--color-primary);
+    }
+
+    .radar-container {
+      position: relative;
+      width: 50%;
+      padding-bottom: 50%;
+      margin-top: var(--space-24);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .radar-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* РАСПРЕДЕЛЕНИЕ ДНЯ SECTION */
+    .day-buttons {
+      display: flex;
+      gap: var(--space-8);
+      margin-bottom: var(--space-24);
+      flex-wrap: wrap;
+    }
+
+    .day-btn {
+      padding: var(--space-8) var(--space-16);
+      border-radius: 0;
+      border: 2px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text);
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+      font-weight: 500;
+      transition: all var(--duration-fast) var(--ease-standard);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .day-btn:hover,
+    .day-btn--active {
+      border-color: var(--color-primary);
+      background: rgba(255, 84, 89, 0.15);
+      color: var(--color-primary);
+    }
+
+    .donut-container {
+      position: relative;
+      width: 280px;
+      max-width: 100%;
+      margin: 0 auto var(--space-24);
+    }
+
+    .donut-svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .donut-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: var(--font-size-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .donut-value {
+      font-size: var(--font-size-3xl);
+      margin-top: var(--space-4);
+      color: var(--color-primary);
+    }
+
+    .legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: var(--space-12);
+      font-size: var(--font-size-sm);
+    }
+
+    .legend-row {
+      display: flex;
+      align-items: center;
+      gap: var(--space-8);
+    }
+
+    .legend-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    /* МУЗЫКА SECTION */
+    .instruments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: var(--space-16);
+      margin-bottom: var(--space-32);
+    }
+
+    .instrument-card {
+      text-align: center;
+      cursor: pointer;
+      padding: var(--space-12);
+      border-radius: 0;
+      border: 2px solid transparent;
+      transition: all var(--duration-fast) var(--ease-standard);
+    }
+
+    .instrument-card:hover {
+      border-color: var(--color-primary);
+      background: rgba(255, 84, 89, 0.1);
+    }
+
+    .instrument-icon {
+      font-size: 40px;
+      margin-bottom: var(--space-8);
+    }
+
+    .instrument-name {
+      font-size: var(--font-size-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-secondary);
+    }
+
+    .songs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: var(--space-16);
+    }
+
+    .song-card {
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      padding: var(--space-12);
+      background: rgba(255, 255, 255, 0.02);
+      transition: all var(--duration-fast) var(--ease-standard);
+    }
+
+    .song-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: var(--color-primary);
+    }
+
+    .song-album {
+      width: 100%;
+      aspect-ratio: 1;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 0;
+      margin-bottom: var(--space-8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-size-xs);
+      color: var(--color-text-secondary);
+    }
+
+    .song-title {
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      margin-bottom: var(--space-8);
+      line-height: 1.3;
+    }
+
+    .song-actions {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .song-btn {
+      flex: 1;
+      padding: var(--space-6) var(--space-8);
+      border-radius: 0;
+      border: 1px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      font-size: var(--font-size-xs);
+      transition: all var(--duration-fast) var(--ease-standard);
+    }
+
+    .song-btn:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .song-heart {
+      padding: var(--space-6) var(--space-8);
+      background: transparent;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      cursor: pointer;
+      font-size: var(--font-size-lg);
+      transition: all var(--duration-fast) var(--ease-standard);
+    }
+
+    .song-heart:hover,
+    .song-heart--liked {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+
+    .song-heart img {
+  transition: filter var(--duration-fast) var(--ease-standard);
+}
+
+/* при наведении или в состоянии liked */
+.song-heart:hover img,
+.song-heart--liked img {
+  /* пример: делаем иконку красной, близкой к var(--color-primary) */
+  filter: invert(27%) sepia(98%) saturate(7495%) hue-rotate(1deg) brightness(107%) contrast(105%);
+}
+
+    /* ЛЮБЛЮ-НЕЛЮБЛЮ SECTION */
+    .like-dislike-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: var(--space-12);
+      margin-bottom: var(--space-24);
+    }
+
+    .like-card {
+      padding: var(--space-16);
+      border-radius: 0;
+      border: 2px solid var(--color-border);
+      background: rgba(255, 255, 255, 0.02);
+      cursor: pointer;
+      text-align: center;
+      font-size: var(--font-size-sm);
+      transition: all var(--duration-fast) var(--ease-standard);
+      user-select: none;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .like-card:hover {
+      border-color: var(--color-primary);
+      background: rgba(255, 84, 89, 0.08);
+    }
+
+    .like-card--selected-like {
+      border-color: var(--color-primary);
+      background: rgba(34, 197, 94, 0.15);
+      color: rgba(34, 197, 94, 1);
+    }
+
+    .like-card--selected-dislike {
+      border-color: rgba(192, 21, 47, 1);
+      background: rgba(192, 21, 47, 0.15);
+      color: rgba(192, 21, 47, 1);
+    }
+
+    .like-card--correct {
+      border-color: rgba(34, 197, 94, 1);
+      background: rgba(34, 197, 94, 0.2);
+      color: rgba(34, 197, 94, 1);
+    }
+
+    .like-card--wrong {
+      border-color: var(--color-red-500);
+      background: rgba(192, 21, 47, 0.2);
+      color: var(--color-red-500);
+    }
+
+    .like-check-btn {
+      padding: var(--space-12) var(--space-24);
+      background: var(--color-primary);
+      border: none;
+      border-radius: 0;
+      color: var(--color-white);
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: all var(--duration-fast) var(--ease-standard);
+      margin-top: var(--space-16);
+    }
+
+    .like-check-btn:hover:not(:disabled) {
+      background: var(--color-primary-hover);
+      box-shadow: var(--shadow-md);
+    }
+
+    .like-check-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .like-results {
+      margin-top: var(--space-24);
+      padding: var(--space-16);
+      border-radius: 0;
+      border: 1px solid var(--color-border);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .like-results__title {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      margin-bottom: var(--space-12);
+      color: var(--color-primary);
+    }
+
+    .like-results__text {
+      font-size: var(--font-size-sm);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    .btn-secondary {
+      padding: var(--space-8) var(--space-16);
+      background: transparent;
+      border: 1px solid var(--color-border);
+      border-radius: 0;
+      color: var(--color-text);
+      cursor: pointer;
+      font-size: var(--font-size-sm);
+      transition: all var(--duration-fast) var(--ease-standard);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--space-24);
+      font-size: var(--font-size-xs);
+      color: var(--color-text-secondary);
+      border-top: 1px solid var(--color-border);
+      margin-top: var(--space-32);
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: var(--space-16);
+      }
+
+      .page-wrapper {
+        padding: var(--space-8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header class="top-bar">
+      <div class="top-bar__title">
+        <h1>Инфографика Анастасии Петровой</h1>
+        <span class="top-bar__subtitle">Интерактивная веб-версия</span>
+      </div>
+    </header>
+
+    <!-- ИНФОРМАЦИЯ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Информация</h2>
+        <div class="card__dots">
+          <span class="dot dot--accent"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="info-content">
+        <div class="avatar-circle">
+          <img src="img/photos/avatar.jpg" alt="Анастасия Петрова" style="width: 112%; height: 112%; object-fit: cover;">
+        </div>
+        <div class="info-fields">
+          <div class="info-field">
+            <div class="info-field__label">Имя</div>
+            <div class="info-field__value">Анастасия</div>
+          </div>
+          <div class="info-field">
+            <div class="info-field__label">Фамилия</div>
+            <div class="info-field__value">Петрова</div>
+          </div>
+          <div class="info-field">
+            <div class="info-field__label">Никнейм</div>
+            <div class="info-field__value">Dragonburrrn</div>
+          </div>
+          <div class="info-field">
+            <div class="info-field__label">День рождения</div>
+            <div class="info-field__value">14.02.2003</div>
+          </div>
+          <div class="info-field">
+            <div class="info-field__label">Гендер</div>
+            <div class="info-field__value">Женский</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БИОГРАФИЯ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Биография</h2>
+        <div class="card__dots">
+          <span class="dot"></span>
+          <span class="dot dot--accent"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="timeline-interactive">
+        <div class="timeline-track"></div>
+        <div class="timeline-points">
+          <button class="timeline-point timeline-point--active" data-age="0" title="Рождение">0</button>
+          <button class="timeline-point" data-age="7" title="Школа">7</button>
+          <button class="timeline-point" data-age="12" title="Переезд">12</button>
+          <button class="timeline-point" data-age="14" title="Музыка">14</button>
+          <button class="timeline-point" data-age="16" title="Лицей">16</button>
+          <button class="timeline-point" data-age="18" title="Университет">18</button>
+          <button class="timeline-point" data-age="20" title="Работа">20</button>
+          <button class="timeline-point" data-age="22" title="Магистратура">22</button>
+          <!-- некликабельные вспомогательные возраста -->
+          <span class="timeline-point timeline-point--inactive" title="вспомогательный возраст">3</span>
+          <span class="timeline-point timeline-point--inactive" title="вспомогательный возраст">5</span>
+          <span class="timeline-point timeline-point--inactive" title="вспомогательный возраст">9</span>
+          <span class="timeline-point timeline-point--inactive" title="вспомогательный возраст">11</span>
+        </div>
+      </div>
+
+      <div class="bio-modal" id="bioModal">
+        <div class="bio-modal__content">
+          <button class="bio-modal__close" id="bioModalClose">✕</button>
+          <div class="bio-modal__header" id="bioModalAge"></div>
+          <div class="bio-modal__photo">Фотография (место для фото)</div>
+          <div class="bio-modal__text" id="bioModalText"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОБРАЗОВАНИЕ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Образование</h2>
+        <div class="card__dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot dot--accent"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="education-header">
+        <button class="edu-icon-btn" data-school="school1">
+          <div class="edu-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=3901&format=png&color=FFFFFF" alt="like"/>
+          </div>
+          <div class="edu-label">Средняя школа. Вулканный</div>
+        </button>
+        <button class="edu-icon-btn" data-school="arts">
+          <div class="edu-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=12654&format=png&color=FFFFFF" alt="like"/>
+          </div>
+          <div class="edu-label">Детская школа искусств (страданий)</div>
+        </button>
+        <button class="edu-icon-btn" data-school="school2">
+          <div class="edu-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=6356&format=png&color=FFFFFF" alt="like"/>
+          </div>
+          <div class="edu-label">Средняя школа №3. Рыбачий</div>
+        </button>
+        <button class="edu-icon-btn" data-school="school3">
+          <div class="edu-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=iiBewifv8LwR&format=png&color=FFFFFF" alt="like"/>
+          </div>
+          <div class="edu-label">Лицей №4 Чебоксары</div>
+        </button>
+        <button class="edu-icon-btn" data-school="uni">
+          <div class="edu-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=11173&format=png&color=FFFFFF" alt="like"/>
+          </div>
+          <div class="edu-label">СПбГУПТД</div>
+        </button>
+      </div>
+
+      <div class="education-timeline">
+        <div class="edu-track">
+          <div class="edu-progress" id="eduProgress" style="width: 0%; left: 46.9%;"></div>
+        </div>
+        <div class="edu-years" style="display: flex; justify-content: space-between; margin-top: var(--space-8); font-size: var(--font-size-xs); color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: 0.16em;">
+          <span>2003</span>
+          <span>2007</span>
+          <span>2011</span>
+          <span>2015</span>
+          <span>2019</span>
+          <span>2025</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- НАВЫКИ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Навыки</h2>
+        <div class="card__dots">
+          <span class="dot dot--accent"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="skills-header">
+        <button class="course-btn course-btn--active" data-course="1">1 курс</button>
+        <button class="course-btn" data-course="2">2 курс</button>
+        <button class="course-btn" data-course="3">3 курс</button>
+        <button class="course-btn" data-course="4">4 курс</button>
+      </div>
+
+      <!-- TODO: в карте навыков используются полные названия приложений: Adobe Photoshop, Adobe Illustrator, Adobe InDesign, Adobe Premiere Pro, Adobe AfterEffects, Blender, Figma, TouchDesigner -->
+
+      <div class="radar-container">
+        <canvas class="radar-canvas" id="skillsRadar"></canvas>
+      </div>
+    </section>
+
+    <!-- РАСПРЕДЕЛЕНИЕ ДНЯ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Распределение дня</h2>
+        <div class="card__dots">
+          <span class="dot"></span>
+          <span class="dot dot--accent"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="day-buttons">
+        <button class="day-btn day-btn--active" data-day="0">Пн</button>
+        <button class="day-btn" data-day="1">Вт</button>
+        <button class="day-btn" data-day="2">Ср</button>
+        <button class="day-btn" data-day="3">Чт</button>
+        <button class="day-btn" data-day="4">Пт</button>
+        <button class="day-btn" data-day="5">Сб</button>
+        <button class="day-btn" data-day="6">Вс</button>
+      </div>
+
+      <div class="donut-container">
+        <svg class="donut-svg" viewBox="0 0 120 120" aria-hidden="true">
+          <circle cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="16" stroke-linecap="butt"></circle>
+          <circle id="seg-work" cx="60" cy="60" r="40" fill="none" stroke="var(--color-red-400)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+          <circle id="seg-tv" cx="60" cy="60" r="40" fill="none" stroke="var(--color-orange-400)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+          <circle id="seg-study" cx="60" cy="60" r="40" fill="none" stroke="var(--color-teal-400)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+          <circle id="seg-games" cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+          <circle id="seg-gym" cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+          <circle id="seg-music" cx="60" cy="60" r="40" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="16" stroke-dasharray="0 251.2" stroke-linecap="butt" transform="rotate(-90 60 60)"></circle>
+        </svg>
+        <div class="donut-center">
+          <div>сейчас</div>
+          <div class="donut-value">100%</div>
+        </div>
+      </div>
+
+      <div class="legend" id="dayLegend">
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: var(--color-red-400);"></div>
+          <span>Работа: <strong id="val-work">10%</strong></span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: var(--color-orange-400);"></div>
+          <span>Сериалы: <strong id="val-tv">0%</strong></span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: var(--color-teal-400);"></div>
+          <span>Учеба: <strong id="val-study">60%</strong></span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: rgba(255,255,255,0.6);"></div>
+          <span>Игры: <strong id="val-games">10%</strong></span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: rgba(255,255,255,0.3);"></div>
+          <span>Спортзал: <strong id="val-gym">10%</strong></span>
+        </div>
+        <div class="legend-row">
+          <div class="legend-swatch" style="background: rgba(255,255,255,0.15);"></div>
+          <span>Музыка: <strong id="val-music">10%</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- МУЗЫКА -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Музыка</h2>
+        <div class="card__dots">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot dot--accent"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <h3 style="margin-bottom: var(--space-16); font-size: var(--font-size-lg);">Инструменты</h3>
+      <div class="instruments-grid">
+        <div class="instrument-card" data-instrument="piano" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=4375&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Фортепиано</div>
+        </div>
+        <div class="instrument-card" data-instrument="acoustic" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=227&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Акустическая гитара</div>
+        </div>
+        <div class="instrument-card" data-instrument="ukulele" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=227&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Укулеле</div>
+        </div>
+        <div class="instrument-card" data-instrument="electric" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=11007&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Электрогитара</div>
+        </div>
+        <div class="instrument-card" data-instrument="bass" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=G5nxwz1olU48&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Бас-гитара</div>
+        </div>
+        <div class="instrument-card" data-instrument="accordion" title="Слушать">
+          <div class="instrument-icon">
+            <img width="40" height="40" src="https://img.icons8.com/?size=100&id=25016&format=png&color=FFFFFF" alt="folk-music"/>
+          </div>
+          <div class="instrument-name">Гармошка</div>
+        </div>
+      </div>
+
+      <h3 style="margin: var(--space-24) 0 var(--space-16); font-size: var(--font-size-lg);">Любимые песни</h3>
+      <div class="songs-grid">
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/4_am_in_London.png') center/cover no-repeat;"></div>
+          <div class="song-title">4 am in London<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">T-Fest</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/T-Fest_-_4_am_in_London_80377731.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Lizer.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Не герой<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Lizer</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/LIZER_-_Ne_gerojj_74755428.mp3">
+<img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/The_Line.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">The Line<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">twenty one pilots</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/twenty_one_pilots_-_The_Line_from_the_series_Arcane_League_of_Legends_78592037.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/To_Ashes_and_Blood.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">To Ashes and Blood<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Woodkid</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Woodkid_-_To_Ashes_and_Blood_from_the_series_Arcane_League_of_Legends_78506990.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Untrust.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Untrust<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Saluki</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/SALUKI_ATHMA_BOYS_-_UNTRUST_78562402.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Malo.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Malo<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Егор Крид</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/EGOR_KRID_-_Malo_78625261.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/DUBTSOVA.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">DUBTSOVA<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Егор Крид</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Egor_Krid_-_DUBTSOVA_78617212.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/1.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">1%<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Saluki, Toxi$</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/SALUKI_Toxi_-_1_78562405.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/SEREBRO.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Перепутала<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">SEREBRO</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/SEREBRO_-_Pereputala_64567920.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/ATL.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Серпантин<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">ATL</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/ATL_-_Serpantin_66597608.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Pussy_boy.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Pussy boy<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Егор Крид</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Egor_Krid_-_PUSSY_BOY_73755941.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Redecorate.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Redecorate<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">twenty one pilots</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/twenty_one_pilots_-_Redecorate_72976629.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/One_way.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">One way<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">twenty one pilots</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Twenty_One_Pilots_-_One_Way_79731066.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Next_semester.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Next semester<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">twenty one pilots</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Twenty One Pilots - Next Semester.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Meiomi.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Meiomi<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Young Miko</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Young Miko - Meiomi (hitmos.fm).mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/ZARI.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">ZARI<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Marina Satti</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/marina_satti_-_Zari_Evrovidenie_2024_Greciya_77581931.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Play_Destroy.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Play Destroy<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Poppy, Grimes</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Poppy_-_Play_Destroy_feat_Grimes_67395686.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <!-- TODO: вставь аудиодорожку песни: audio/tracks/na-mne-hoe.mp3 -->
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Hoe.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">На мне hoe<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Егор Крид</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/EGOR_KRID_-_NA_MNE_HOE_73049846.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <!-- TODO: вставь аудиодорожку песни: audio/tracks/dragonborn.mp3 -->
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/Dragonborn.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Dragonborn<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Big Baby Tape</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Big_Baby_Tape_-_Dragonborn_60366661.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <!-- TODO: вставь аудиодорожку песни: audio/tracks/dnk.mp3 -->
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/DNA.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">ДНК<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Face *иноагент</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Face_-_DNK_73245458.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/lum.png') center/cover no-repeat;"></div>
+          <div class="song-title">Lumière<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Lorien Testard</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Lorien_Testard_-_Lumire_79450659.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/low_roar.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">St. Eriksplan<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Low Roar</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Low_Roar_-_St_Eriksplan_65009131.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/ilusha.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Мой первый фанфик<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Илюша</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Ilyusha_-_Mojj_pervyjj_fanfik_79805526.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+        <div class="song-card">
+          <div class="song-album" style="background: url('img/albums/chris.jpg') center/cover no-repeat;"></div>
+          <div class="song-title">Christine<br><span style="font-size: var(--font-size-xs); color: var(--color-text-secondary);">Christine</span></div>
+          <div class="song-actions">
+            <button class="song-btn" data-track="audio/tracks/Christine_and_the_Queens_-_Christine_73069007.mp3">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=25602&format=png&color=FFFFFF" alt="play"/>
+            </button>
+            <button class="song-heart">
+              <img width="20" height="20" src="https://img.icons8.com/?size=100&id=87&format=png&color=FFFFFF" alt="like"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЛЮБЛЮ-НЕЛЮБЛЮ -->
+    <section class="card">
+      <div class="card__header">
+        <h2 class="card__title">Люблю-Не люблю</h2>
+        <div class="card__dots">
+          <span class="dot dot--accent"></span>
+          <span class="dot dot--accent"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="divider"></div>
+
+      <p style="color: var(--color-text-secondary); margin-bottom: var(--space-16);">Насколько хорошо ты меня знаешь? Выбери карточки с тем, что по твоему мнению мне нравится! Как закончишь - проверяй ответы!</p>
+
+      <div class="like-dislike-grid" id="likeGrid">
+        <!-- заполняется JS -->
+      </div>
+
+      <button class="like-check-btn" id="likeCheckBtn">Проверить ответы</button>
+
+      <div class="like-results" id="likeResults" style="display: none;">
+        <div class="like-results__title">Результаты</div>
+        <div class="like-results__text" id="likeResultsText"></div>
+        <button class="btn-secondary" id="likeResetBtn" style="margin-top: var(--space-12);">Попробовать ещё раз</button>
+      </div>
+    </section>
+
+    <footer>
+      <p>Студент: Петрова Анастасия Александровна · Группа: 1-МГЗ-2 · 2025</p>
+      <p>Кафедра цифровых и аддитивных технологий</p>
+    </footer>
+  </div>
+
+  <script>
+    // ===== БИОГРАФИЯ =====
+    const bioData = {
+      0: {
+        title: "Возраст 0 лет - Рождение",
+        text: "Родилась в городе Елизово Камчатского края, однако первые двенадцать лет жила в воинской части, окружённой лесом. Как и многие дети, посещала детский сад. Друзей было немного, в основном это были ребята, которые жили со мной в той же воинской части, но со временем наши детские связи не сохранились во взрослой жизни.",
+        image: "img/photos/age-0.jpg"
+      },
+      7: {
+        title: "Возраст 7 лет - Начало школы",
+        text: "Я пошла в школу в военном посёлке Вулканный. Училась в основном на «отлично», особенно нравились информатика и математика. В семь лет начала заниматься в музыкальной школе, что оказалось очень непростым опытом, но, несмотря на сложности, интерес к музыке и желание развиваться в этой сфере сохранились. Также посещала секцию баскетбола при школе, что повлияло на мои дальнейшие спортивные увлечения.",
+        image: "img/photos/age-7.jpg"
+      },
+      12: {
+        title: "Возраст 12 лет - Переезд",
+        text: "Позже моего отца повысили до звания майора, и семья переехала в закрытый город Вилючинск, в посёлок Рыбачий. Это место известно как база атомных подводных лодок, въезд в город осуществляется по пропускам. В Рыбачьем я продолжила обучение в школе № 3. Переезд дался непросто, но со временем удалось наладить хорошие отношения с одноклассниками, с частью из них общение сохраняется до сих пор. Учителя положительно относились ко мне за хорошую успеваемость и участие в олимпиадах и школьных мероприятиях. Музыкальную школу также пришлось сменить, в этот период успеваемость там заметно снизилась.",
+        image: "img/photos/age-12.jpg"
+      },
+      14: {
+        title: "Возраст 14 лет - Открытие музыки",
+        text: "Несмотря на трудности, я всё же завершила обучение в музыкальной школе по семилетней программе и успешно сдала выпускные экзамены. В это же время познакомилась с творчеством группы twenty one pilots, и их музыка стала важным стимулом к дальнейшему изучению музыки и развитию как исполнителя и как композитора.",
+        image: "img/photos/age-14.jpg"
+      },
+      16: {
+        title: "Возраст 16 лет - Лицей",
+        text: "После окончания девятого класса семья переехала в Чебоксары, где я поступила в десятый класс лицея № 4. Резкое повышение уровня требований в учебе оказалось сложным: если раньше я входила в число лучших учеников школы, то в лицее поначалу была скорее «середняком». В этот период больше внимания уделяла спорту: занималась баскетболом, гимнастикой и лёгкой атлетикой. Лишь в одиннадцатом классе начала целенаправленно сосредотачиваться на подготовке к ЕГЭ и стараться поддерживать высокую успеваемость.",
+        image: "img/photos/age-16.jpg"
+      },
+      18: {
+        title: "Возраст 18 лет - Университет",
+        text: "Лицей я окончила с красным аттестатом и поступила в Санкт-Петербургский государственный университет промышленных технологий и дизайна (СПбГУПТД). Изначально планировала поступать туда в том числе ради возможности играть в баскетбольной команде университета, но в итоге профессиональная траектория сложилась несколько иначе.",
+        image: "img/photos/age-18.jpg"
+      },
+      20: {
+        title: "Возраст 20 лет - Лаборант",
+        text: "В дальнейшем я начала работать лаборантом на кафедре цифровых и аддитивных технологий, что позволило получить новый профессиональный опыт и расширить представление о будущей сфере деятельности.",
+        image: "img/photos/age-20.jpg"
+      },
+      22: {
+        title: "Возраст 22 года - Магистратура",
+        text: "Я заканчиваю университет с красным дипломом, поступаю в магистратуру, ну остальное уже вы знаете!)",
+        image: "img/photos/age-22.jpg"
+      }
+    };
+
+    document.querySelectorAll('.timeline-point').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const age = btn.dataset.age;
+        document.querySelectorAll('.timeline-point').forEach(b => b.classList.remove('timeline-point--active'));
+        btn.classList.add('timeline-point--active');
+        
+        document.getElementById('bioModalAge').textContent = bioData[age].title;
+        document.getElementById('bioModalText').textContent = bioData[age].text;
+        const photoBlock = document.querySelector('.bio-modal__photo');
+    if (bioData[age].image) {
+      photoBlock.style.backgroundImage = `url('${bioData[age].image}')`;
+      photoBlock.style.backgroundSize = 'cover';
+      photoBlock.style.backgroundPosition = 'center';
+      photoBlock.textContent = '';
+    } else {
+      photoBlock.style.backgroundImage = '';
+      photoBlock.textContent = 'Фотография (место для фото)';
+    }
+        document.getElementById('bioModal').classList.add('bio-modal--active');
+      });
+    });
+
+    document.getElementById('bioModalClose').addEventListener('click', () => {
+      document.getElementById('bioModal').classList.remove('bio-modal--active');
+    });
+
+    // ===== ОБРАЗОВАНИЕ =====
+    const eduData = {
+      school1: { start: 0.4, width: 0.205 }, // 2011-2015
+      arts: { start: 0.4, width: 0.29 },    // 2011-2017
+      school2: { start: 0.606, width: 0.2 }, // 2015-2019
+      school3: { start: 0.8, width: 0.069 }, // 2019-2021
+      uni: { start: 0.87, width: 0.1303 }      // 2021-2025
+    };
+
+    document.querySelectorAll('.edu-icon-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.edu-icon-btn').forEach(b => b.classList.remove('edu-icon-btn--active'));
+        btn.classList.add('edu-icon-btn--active');
+        
+        const school = btn.dataset.school;
+        const data = eduData[school];
+        const progress = document.getElementById('eduProgress');
+        progress.style.left = (data.start * 100) + '%';
+        progress.style.width = (data.width * 100) + '%';
+      });
+    });
+
+    // ===== НАВЫКИ =====
+    const skillsData = {
+      1: { ps: 30, ai: 60, id: 40, figma: 70, ae: 0, pp: 0, blender: 0, td: 0 },
+      2: { ps: 50, ai: 70, id: 60, figma: 80, ae: 0, pp: 0, blender: 0, td: 0 },
+      3: { ps: 80, ai: 70, id: 70, figma: 90, ae: 30, pp: 20, blender: 10, td: 0 },
+      4: { ps: 80, ai: 70, id: 80, figma: 90, ae: 30, pp: 30, blender: 30, td: 50 }
+    };
+
+    let skillsCanvas = document.getElementById('skillsRadar');
+    let skillsCtx = skillsCanvas.getContext('2d');
+    let currentCourse = 1;
+
+    function drawSkillsRadar() {
+      const w = skillsCanvas.clientWidth;
+      const h = skillsCanvas.clientHeight;
+      const dpr = window.devicePixelRatio || 1;
+      
+      skillsCanvas.width = w * dpr;
+      skillsCanvas.height = h * dpr;
+      skillsCtx.scale(dpr, dpr);
+
+      const cx = w / 2;
+      const cy = h / 2;
+      const radius = Math.min(w, h) * 0.35;
+      const labels = ['Adobe Photoshop', 'Adobe Illustrator', 'Adobe InDesign', 'Figma', 'Adobe AfterEffects', 'Adobe Premiere Pro', 'Blender', 'TouchDesigner'];
+      const values = skillsData[currentCourse];
+      const valArray = [values.ps, values.ai, values.id, values.figma, values.ae, values.pp, values.blender, values.td];
+
+      skillsCtx.clearRect(0, 0, w, h);
+      skillsCtx.save();
+      skillsCtx.translate(cx, cy);
+
+      // Grid
+      skillsCtx.strokeStyle = 'rgba(255,255,255,0.15)';
+      skillsCtx.lineWidth = 1;
+      for (let l = 1; l <= 5; l++) {
+        const r = (radius / 5) * l;
+        skillsCtx.beginPath();
+        for (let i = 0; i < labels.length; i++) {
+          const angle = (Math.PI * 2 * i) / labels.length - Math.PI / 2;
+          const x = Math.cos(angle) * r;
+          const y = Math.sin(angle) * r;
+          if (i === 0) skillsCtx.moveTo(x, y);
+          else skillsCtx.lineTo(x, y);
+        }
+        skillsCtx.closePath();
+        skillsCtx.stroke();
+      }
+
+      // Labels
+      skillsCtx.fillStyle = 'rgba(255,255,255,0.7)';
+      skillsCtx.font = '10px var(--font-family-base)';
+      skillsCtx.textAlign = 'center';
+      skillsCtx.textBaseline = 'middle';
+      for (let i = 0; i < labels.length; i++) {
+        const angle = (Math.PI * 2 * i) / labels.length - Math.PI / 2;
+        const x = Math.cos(angle) * (radius + 15);
+        const y = Math.sin(angle) * (radius + 15);
+        skillsCtx.fillText(labels[i], x, y);
+      }
+
+      // Data polygon
+      skillsCtx.beginPath();
+      for (let i = 0; i < labels.length; i++) {
+        const norm = valArray[i] / 100;
+        const r = radius * (0.1 + norm * 0.9);
+        const angle = (Math.PI * 2 * i) / labels.length - Math.PI / 2;
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        if (i === 0) skillsCtx.moveTo(x, y);
+        else skillsCtx.lineTo(x, y);
+      }
+      skillsCtx.closePath();
+      skillsCtx.fillStyle = 'rgba(255,84,89,0.2)';
+      skillsCtx.fill();
+      skillsCtx.strokeStyle = 'rgba(255,84,89,0.9)';
+      skillsCtx.lineWidth = 2;
+      skillsCtx.stroke();
+
+      // Points
+      skillsCtx.fillStyle = 'rgba(255,255,255,0.95)';
+      for (let i = 0; i < labels.length; i++) {
+        const norm = valArray[i] / 100;
+        const r = radius * (0.1 + norm * 0.9);
+        const angle = (Math.PI * 2 * i) / labels.length - Math.PI / 2;
+        const x = Math.cos(angle) * r;
+        const y = Math.sin(angle) * r;
+        skillsCtx.beginPath();
+        skillsCtx.arc(x, y, 3, 0, Math.PI * 2);
+        skillsCtx.fill();
+      }
+
+      skillsCtx.restore();
+    }
+
+    document.querySelectorAll('.course-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.course-btn').forEach(b => b.classList.remove('course-btn--active'));
+        btn.classList.add('course-btn--active');
+        currentCourse = Number(btn.dataset.course);
+        drawSkillsRadar();
+      });
+    });
+
+    window.addEventListener('resize', drawSkillsRadar);
+    drawSkillsRadar();
+
+    // ===== РАСПРЕДЕЛЕНИЕ ДНЯ =====
+    const dayData = [
+      { work: 10, tv: 0, study: 60, games: 10, gym: 10, music: 10 },
+      { work: 0, tv: 0, study: 70, games: 0, gym: 0, music: 30 },
+      { work: 25, tv: 0, study: 60, games: 0, gym: 10, music: 5 },
+      { work: 25, tv: 20, study: 50, games: 0, gym: 0, music: 5 },
+      { work: 80, tv: 20, study: 0, games: 0, gym: 0, music: 0 },
+      { work: 25, tv: 0, study: 25, games: 40, gym: 10, music: 0 },
+      { work: 0, tv: 20, study: 30, games: 30, gym: 0, music: 20 }
+    ];
+
+    const dayNames = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+    let currentDay = 0;
+
+    function updateDonutChart(dayIdx) {
+      const data = dayData[dayIdx];
+      const circumference = 2 * Math.PI * 40;
+      const total = data.work + data.tv + data.study + data.games + data.gym + data.music;
+
+      const segments = [
+        { id: 'seg-work', val: data.work },
+        { id: 'seg-tv', val: data.tv },
+        { id: 'seg-study', val: data.study },
+        { id: 'seg-games', val: data.games },
+        { id: 'seg-gym', val: data.gym },
+        { id: 'seg-music', val: data.music }
+      ];
+
+      let offset = 0;
+      segments.forEach(seg => {
+        const share = seg.val / total;
+        const length = circumference * share;
+        const remaining = circumference - length;
+        const el = document.getElementById(seg.id);
+        if (el) {
+          el.setAttribute('stroke-dasharray', length + ' ' + remaining);
+          el.setAttribute('stroke-dashoffset', -offset);
+          offset += length;
+        }
+      });
+
+      document.getElementById('val-work').textContent = data.work + '%';
+      document.getElementById('val-tv').textContent = data.tv + '%';
+      document.getElementById('val-study').textContent = data.study + '%';
+      document.getElementById('val-games').textContent = data.games + '%';
+      document.getElementById('val-gym').textContent = data.gym + '%';
+      document.getElementById('val-music').textContent = data.music + '%';
+    }
+
+    document.querySelectorAll('.day-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.day-btn').forEach(b => b.classList.remove('day-btn--active'));
+        btn.classList.add('day-btn--active');
+        currentDay = Number(btn.dataset.day);
+        updateDonutChart(currentDay);
+      });
+    });
+
+    updateDonutChart(currentDay);
+
+    // ===== ПЕСНИ =====
+    // TODO: вставь пути к аудиодорожкам инструментов и песен в этот объект
+    // Формат: data-attribute из HTML → путь к файлу .mp3
+    // Пример: 'piano': 'audio/instruments/piano.mp3'
+    const audioMap = {
+      'piano': 'audio/instruments/piano.mp3',
+      'acoustic': 'audio/instruments/acoustic-guitar.mp3',
+      'ukulele': 'audio/instruments/ukulele.mp3',
+      'electric': 'audio/instruments/electric-guitar.mp3',
+      'bass': 'audio/instruments/bass.mp3',
+      'accordion': 'audio/instruments/accordion.mp3'
+    };
+
+    let currentAudio = null;
+let currentInstrument = null;
+
+document.querySelectorAll('.instrument-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const instrumentId = card.dataset.instrument;
+    const src = audioMap[instrumentId];
+    if (!src) return;
+
+    // если клик по тому же инструменту и сейчас играет — остановить
+    if (currentAudio && currentInstrument === instrumentId && !currentAudio.paused) {
+      currentAudio.pause();
+      currentAudio = null;
+      currentInstrument = null;
+      return;
+    }
+
+    // если играло что-то другое — остановить
+    if (currentAudio) {
+      currentAudio.pause();
+    }
+
+    currentInstrument = instrumentId;
+    currentAudio = new Audio(src);
+    currentAudio.play();
+  });
+});
+
+    // клики на кнопки песен
+    let currentSong = null;
+let currentButton = null;
+
+document.querySelectorAll('.song-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const src = btn.dataset.track;
+    if (!src) return;
+
+    // если нажали на ту же кнопку и трек уже играет — ставим на паузу
+    if (currentSong && currentButton === btn && !currentSong.paused) {
+      currentSong.pause();
+      return;
+    }
+
+    // если играла другая песня — остановить её
+    if (currentSong) {
+      currentSong.pause();
+    }
+
+    currentSong = new Audio(src);
+    currentButton = btn;
+    currentSong.play();
+  });
+});
+
+    // лайки на песни
+    document.querySelectorAll('.song-heart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        btn.classList.toggle('song-heart--liked');
+      });
+    });
+
+    // ===== ЛЮБЛЮ-НЕЛЮБЛЮ =====
+    // TODO: Здесь ты можешь добавить или изменить пункты того, что тебе нравится и не нравится
+    const likeItems = [
+      "Энергетики", "Сериал Аркейн", "twenty one pilots", "Деньги", "Death Stranding",
+      "Кислые мармеладки", "Российский стритвир", "Young Miko", "Вселенная ведьмака",
+      "Фильм D.E.B.S.", "Elden Ring", "Егор Крид", "Кепки"
+    ];
+
+    const dislikeItems = [
+      "Пауки", "Драма", "Проблемы", "Дедлайны", "Fable 2", "Бывшие", "Платья",
+      "Глупость", "Холод", "День Святого Валентина", "Медленный интернет",
+      "Громкий шум", "Хоррор фильмы", "Рэпер MACAN"
+    ];
+
+    const allItems = [...likeItems, ...dislikeItems].sort(() => Math.random() - 0.5);
+    const likeGrid = document.getElementById('likeGrid');
+
+    allItems.forEach(item => {
+      const card = document.createElement('button');
+      card.className = 'like-card';
+      card.textContent = item;
+      card.dataset.item = item;
+      card.addEventListener('click', () => {
+        if (card.classList.contains('like-card--selected-like')) {
+          card.classList.remove('like-card--selected-like');
+        } else if (card.classList.contains('like-card--selected-dislike')) {
+          card.classList.add('like-card--selected-like');
+          card.classList.remove('like-card--selected-dislike');
+        } else {
+          card.classList.add('like-card--selected-like');
+        }
+      });
+      likeGrid.appendChild(card);
+    });
+
+    document.getElementById('likeCheckBtn').addEventListener('click', () => {
+      let correct = 0;
+      document.querySelectorAll('.like-card').forEach(card => {
+        const item = card.dataset.item;
+        const selected = card.classList.contains('like-card--selected-like');
+        const isLike = likeItems.includes(item);
+
+        card.classList.remove('like-card--selected-like', 'like-card--selected-dislike');
+        if (selected === isLike) {
+          card.classList.add('like-card--correct');
+          correct++;
+        } else {
+          card.classList.add('like-card--wrong');
+        }
+      });
+
+      const results = document.getElementById('likeResults');
+      const resultsText = document.getElementById('likeResultsText');
+      resultsText.textContent = `Ты угадал ${correct} из ${allItems.length}! ${correct === allItems.length ? '🎉 Идеально!' : correct > allItems.length / 2 ? '👍 Неплохо!' : '💪 Попробуй ещё раз!'}`;
+      results.style.display = 'block';
+    });
+
+    document.getElementById('likeResetBtn').addEventListener('click', () => {
+      document.querySelectorAll('.like-card').forEach(card => {
+        card.classList.remove('like-card--selected-like', 'like-card--selected-dislike', 'like-card--correct', 'like-card--wrong');
+      });
+      document.getElementById('likeResults').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
